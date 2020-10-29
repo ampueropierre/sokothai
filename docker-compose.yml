@@ -1,0 +1,33 @@
+version: '3'
+services:
+  db:
+    image: mysql:5
+    restart: always
+    ports:
+    - "3307:3306"
+    environment:
+      MYSQL_DATABASE: 'sokothai_db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'sokothai'
+      MYSQL_ROOT_PASSWORD: 'rootpassword'
+
+  maildev:
+    image: djfarrelly/maildev
+    ports:
+      - "8002:80"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+    - "8080:80"
+    depends_on:
+      - db
+    environment:
+      PMA_HOST: db
+
+  php:
+    build: php72
+    ports:
+    - "8072:80"
+    volumes:
+      - .:/var/www
