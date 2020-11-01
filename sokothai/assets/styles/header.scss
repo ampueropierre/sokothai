@@ -1,0 +1,28 @@
+header {
+  background: url("/build/images/sokothai-background-header.jpg");
+  background-size: cover;
+  color: $color-text-header;
+  .block-title {
+    padding: 150px;
+    text-align: center;
+    h1 {
+      font-family: 'gilroy-extrabold';
+      text-transform: uppercase;
+      letter-spacing: 10px;
+    }
+    p {
+      font-size: 25px;
+      letter-spacing: 5px;
+      margin-bottom: 50px;
+    }
+    .header-btn-cta {
+      font-family: 'gilroy-extrabold';
+      color: $primary-color;
+      padding: 15px 20px;
+      border: 2px solid $primary-color;
+      font-size: 15px;
+      border-radius: 15px;
+      letter-spacing: 2px;
+    }
+  }
+}

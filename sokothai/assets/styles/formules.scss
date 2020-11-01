@@ -1,0 +1,69 @@
+.formules {
+  padding: 100px 0;
+  text-align: center;
+  .header-formules {
+    h3 {
+      font-family: gilroy-extrabold;
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .block-formules {
+    background-color: $color-bg-block;
+    border-radius: 15px;
+    height: 300px;
+    padding: 30px 15px;
+    margin-bottom: 30px;
+    h4 {
+      font-size: 20px;
+      font-family: gilroy-extrabold;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 50px;
+    }
+    small {
+      font-size: 11px;
+    }
+    .number-telephone {
+      font-family: gilroy-extrabold;
+      color: #222222;
+    }
+    .btn-formules-carte {
+      color: #464646;
+      font-family: gilroy-extrabold;
+      font-size: 16px;
+      background: linear-gradient(217deg, $color-gradiant-first, $color-gradiant-second 70.71%);
+      padding: 15px 20px;
+      border-radius: 10px;
+    }
+    .row-price {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 80px;
+      .block-price {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid black;
+        padding: 15px 10px;
+        border-radius: 10px;
+        margin-right: 10px;
+        .block-price-time {
+          font-size: 19px;
+          margin-bottom: 10px;
+        }
+        .block-price-number {
+          font-family: gilroy-extrabold;
+          font-size: 21px;
+        }
+      }
+    }
+
+  }
+
+}

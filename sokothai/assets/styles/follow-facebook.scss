@@ -1,0 +1,19 @@
+.follow-facebook {
+  text-align: center;
+  padding: 100px 0;
+  background-color: $primary-color;
+  p {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+  .btn-follow-facebook {
+    font-size: 15px;
+    font-family: gilroy-extrabold;
+    background-color: #005cbf;
+    color: white;
+    padding: 10px 20px;
+    span {
+      margin-left: 20px;
+    }
+  }
+}

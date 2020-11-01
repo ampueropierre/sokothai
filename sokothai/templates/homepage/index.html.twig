@@ -1,5 +1,263 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <h1 class="text-danger">Sokothai</h1>
+    <header xmlns="http://www.w3.org/1999/html">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">
+                    <img src="{{ asset('build/images/logo_white.svg') }}" alt="Logo Sokothai" class="logo-nav">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="{{ asset('build/images/dots-menu.svg') }}" alt="Icon menu" class="nav-icon-menu">
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link nav-link-custom" href="#">Nos formules</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom" href="#">Événements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom" href="#">Le lieux</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom" href="#">
+                                <img src="{{ asset('build/images/facebook-app-symbol.svg') }}" alt="Logo facebook Sokothai" class="nav-facebook-logo">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="block-title">
+                <h1>Spécialité Asiatique</h1>
+                <p>Buffet à volonté</p>
+                <a href="" class="header-btn-cta">Notre carte</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="formules">
+        <div class="container">
+            <div class="header-formules">
+                <h3>Nos Formules</h3>
+                <p>Découvrez nos formules</p>
+            </div>
+            <div class="row">
+                <div class="col-8 mx-auto">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="block-formules">
+                                <h4>Sur place</h4>
+                                <div class="row-price">
+                                    <div class="block-price">
+                                        <span class="block-price-time">Midi</span>
+                                        <span class="block-price-number">12,90 €</span>
+                                    </div>
+                                    <div class="block-price">
+                                        <span class="block-price-time">Soir</span>
+                                        <span class="block-price-number">17,90 €</span>
+                                    </div>
+                                </div>
+                                <small>*Boisson non compris, prix spécial enfant à partir de 5,90 €</small>
+
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="block-formules">
+                                <h4>À emporter</h4>
+                                <p>Tous les jours, en passant par le téléphone au <a class="number-telephone" href="tel:+330320558867">03 20 55 88 67</a> ou en envoyant un message via Messenger</p>
+                                <a href="" class="btn-formules-carte">Notre carte</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="follow-facebook">
+        <div class="container">
+            <p>Suivez-nous sur facebook afin d'etre informer de nos actualités</p>
+            <a href="" class="btn-follow-facebook">
+                Facebook<span><i class="fa fa-chevron-right"></i></span>
+            </a>
+        </div>
+    </section>
+
+    <section class="events">
+        <div class="container">
+            <div class="header-events">
+                <h3>Événements</h3>
+                <p>Retrouvez-nous dans nos différentes soirées à thème</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <a href="#" class="block-event">
+                        <div class="block-event-information">
+                            <time>SAM. 31 OCT. 2020</time>
+                            <h4>HALLOWEN</h4>
+                            <span>18:00</span>
+                        </div>
+                        <div class="block-event-icon">
+                            <div class="circle">
+                                <svg width="3em" height="2em" viewBox="0 0 16 16" class="bi bi-chevron-compact-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <a href="#" class="block-event">
+                        <div class="block-event-information">
+                            <time>SAM. 31 DEC. 2020</time>
+                            <h4>NOUVEL AN</h4>
+                            <span>18:00</span>
+                        </div>
+                        <div class="block-event-icon">
+                            <div class="circle">
+                                <svg width="3em" height="2em" viewBox="0 0 16 16" class="bi bi-chevron-compact-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="block-event">
+                        <p class="block-event-empty">Pas d'évènement pour le moment</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="localisation" class="localisation">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div id="map" class="map">
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="block-adress">
+                        <h3>Adresse</h3>
+                        <p>11, rue Jules Guedes</br>
+                        59700 <span>MARCQ EN BAROEUL</span></br>
+                        à coté du complexe cinéma</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="header-contact">
+                <h3>Contact</h3>
+                <p>Une question? N'hesitez pas à nous écrire, nous vous repondrons le plus rapidement possible</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <form id="contact-form" class="pt-5" action="" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="d-none">Nom</label>
+                            <input id="name" type="text" name="name" class="form-control" placeholder="Nom*">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="d-none">Email</label>
+                            <input id="email" type="text" name="email" class="form-control " placeholder="Email*">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="d-none">Sujet</label>
+                            <select class="form-control" id="subject" name="subject">
+                                <option value="Information Général">Information Général</option>
+                                <option value="Réservation">Réservation</option>
+                                <option value="Privatitation devis">Privatisation devis</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="d-none">Message</label>
+                            <textarea id="message" name="message" rows="10" class="form-control" placeholder="Votre message*"></textarea>
+                        </div>
+                        <input type="submit" class="btn-envoyer mt-3" value="Envoyer">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-6">
+                    <h5>Information</h5>
+                    <img class="logo-footer" src="{{ asset('build/images/logo_white.svg') }}" alt="logo">
+                    <p>
+                        Restautant asiatique<br>
+                        Dans un cadre chalereux<br>
+                        Buffet à volonté
+                    </p>
+                </div>
+                <div class="col-xl-3 col-md-6">
+                    <h5>Horaires d'ouverture</h5>
+                    <p>
+                        Lundi Fermé<br>
+                        Mardi 12h00-14h30 et 19h00-22h00<br>
+                        Mercrdi 12h00-14h30 et 19h00-22h00<br>
+                        Jeudi 12h00-14h30 et 19h00-22h00<br>
+                        Vendredi 12h00-14h30 et 19h00-22h00<br>
+                        Samedi 12h00-14h30 et 19h00-22h00<br>
+                        Dimanche 12h00 à 14h30<br>
+                    </p>
+                </div>
+                <div class="col-xl-3 col-md-6 block-footer-right">
+                    <h5>Suivez-nous</h5>
+                    <p>
+                        <a href="https://www.facebook.com/soko.thai/" target="_blank">
+                            <img class="footer-size-logo" src="{{ asset('build/images/logo_footer_facebook.svg') }}" alt="logo facebook">
+                        </a>
+                        <a href="https://www.instagram.com/soko.thai/" target="_blank">
+                            <img class="footer-size-logo" src="{{ asset('build/images/logo_footer_instagram.svg') }}" alt="logo instagram">
+                        </a>
+                    </p>
+                </div>
+                <div class="col-xl-3 col-md-6 block-footer-right">
+                    <h5>Contact</h5>
+                    <p>
+                        11, rue Jules Guedes<br>
+                        59700 MARCQ EN BAROEUL<br>
+                        03 20 55 88 67<br>
+                    </p>
+                    <a href="mailto:soko.thai.contact@gmail.com" class="footer-link-mail">soko.thai.contact@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>
+            Dev with <i class="fas fa-heart"></i> by <a href="http://ampueropierre.fr/">Ampuero Pierre</a> | <a
+                    href="">Connexion</a>
+        </p>
+    </div>
 {% endblock %}

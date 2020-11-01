@@ -1,0 +1,23 @@
+.localisation {
+  background-color: $color-bg-footer;;
+  color: $color-text-footer;
+  .map {
+    height: 500px;
+  }
+  .block-adress {
+    padding: 182px 0;
+    margin: auto;
+    text-align: center;
+    h3 {
+      font-family: gilroy-extrabold;
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+    p {
+      font-size: 17px;
+      span {
+        font-family: gilroy-extrabold;
+      }
+    }
+  }
+}
