@@ -1,0 +1,33 @@
+nav {
+  color: white;
+  .logo-nav {
+    width: 150px;
+  }
+
+  .navbar-toggler {
+      border: none;
+      outline: none;
+  }
+
+  .nav-icon-menu {
+    width: 30px;
+  }
+
+  //.nav-link {
+  //  padding-right: 1.5rem!important;
+  //  padding-left: 1.5rem!important;
+  //}
+
+  .nav-link-custom {
+    color: white;
+    font-family: 'gilroy-extrabold';
+    font-size: 14px;
+
+  }
+
+  .nav-facebook-logo {
+    width: 30px;
+    position: relative;
+    top: -5px;
+  }
+}

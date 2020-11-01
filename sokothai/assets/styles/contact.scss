@@ -1,0 +1,41 @@
+.contact {
+  text-align: center;
+  padding: 100px 0;
+  .header-contact {
+    h3 {
+      font-family: gilroy-extrabold;
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+    p {
+      font-size: 17px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .form-control {
+    border-radius: 0;
+    &:focus {
+    box-shadow: 0 0 0 0.2rem $primary-color;
+    border-color: $primary-color;
+    }
+  }
+
+  .btn-envoyer {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    font-weight: 700;
+    padding: 0.5rem 2rem;
+    border: 1.5px solid #2b2b2b;
+    color: #2b2b2b;
+    background-color: Transparent;
+    &:hover {
+      color: white;
+      background-color: #2b2b2b;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+}

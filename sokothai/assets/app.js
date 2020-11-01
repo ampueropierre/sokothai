@@ -9,6 +9,8 @@
 import './styles/app.scss';
 
 import 'bootstrap';
+import "@fortawesome/fontawesome-free/js/all.js";
+import "@fortawesome/fontawesome-free/css/all.css";
 import bsCustomFileInput from "bs-custom-file-input";
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.

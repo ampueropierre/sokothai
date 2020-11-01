@@ -1,0 +1,31 @@
+footer {
+  background-color: $color-bg-footer;
+  color: $color-text-footer;
+  h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing:1px;
+  }
+  p {
+    color: #989898;
+    font-size: 13px;
+  }
+  .logo-footer {
+    width: 100px;
+  }
+  .footer-size-logo {
+    width: 40px;
+  }
+  .block-footer-right {
+    text-align: right;
+    @media (max-width: 1200px) {
+      text-align: left;
+    }
+  }
+  .footer-link-mail {
+    font-family: gilroy-extrabold;
+    color: #989898;
+  }
+}
+
