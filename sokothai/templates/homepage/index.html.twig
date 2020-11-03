@@ -25,6 +25,11 @@
                         <li class="nav-item">
                             <a class="nav-link nav-link-custom" href="#">Contact</a>
                         </li>
+                        {% if is_granted('ROLE_USER') %}
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-custom text-danger" href="{{ path('app_logout') }}">Déconnexion</a>
+                            </li>
+                        {% endif %}
                         <li class="nav-item">
                             <a class="nav-link nav-link-custom" href="#">
                                 <img src="{{ asset('build/images/facebook-app-symbol.svg') }}" alt="Logo facebook Sokothai" class="nav-facebook-logo">
@@ -257,7 +262,7 @@
     <div class="footer-bottom">
         <p>
             Dev with <i class="fas fa-heart"></i> by <a href="http://ampueropierre.fr/">Ampuero Pierre</a> | <a
-                    href="">Connexion</a>
+                    href="{{ path('app_login') }}">Connexion</a>
         </p>
     </div>
 {% endblock %}
