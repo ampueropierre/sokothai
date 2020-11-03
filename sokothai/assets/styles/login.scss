@@ -1,0 +1,25 @@
+.login {
+  display: flex;
+  min-height: 100vh;
+  text-align: center;
+  form {
+    width: 400px;
+    margin: auto;
+    background-color: #ededed;
+    padding: 100px 50px;
+    border-radius: 18px;
+    h3 {
+      font-family: gilroy-extrabold;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    .btn-connexion {
+      font-size: 14px;
+      font-family: gilroy-extrabold;
+      background-color: #FFF249;
+      padding: 20px 30px;
+      color: #2b2b2b;
+      margin-top: 35px;
+    }
+  }
+}
