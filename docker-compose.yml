@@ -6,10 +6,10 @@ services:
     ports:
     - "3307:3306"
     environment:
-      MYSQL_DATABASE: 'sokothai_db'
-      MYSQL_USER: 'user'
-      MYSQL_PASSWORD: 'sokothai'
-      MYSQL_ROOT_PASSWORD: 'rootpassword'
+      MYSQL_DATABASE: sokothai_db
+      MYSQL_ROOT_PASSWORD: rootpassword
+    networks:
+      - symfony
 
   maildev:
     image: djfarrelly/maildev
@@ -24,6 +24,8 @@ services:
       - db
     environment:
       PMA_HOST: db
+    networks:
+      - symfony
 
   php:
     build: php72
@@ -31,3 +33,8 @@ services:
     - "8072:80"
     volumes:
       - .:/var/www
+    networks:
+      - symfony
+
+networks:
+  symfony:
