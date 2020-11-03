@@ -2,15 +2,18 @@ FROM php:7.2-apache
 
 EXPOSE 80
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends locales apt-utils git gnupg unzip zip;
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        git \
+        zlib1g-dev\
+        libxml2-dev\
+        libzip-dev \
+    && docker-php-ext-install \
+        zip \
+        intl \
+        mysqli \
+        pdo pdo_mysql
 
-RUN docker-php-ext-install -j$(nproc) opcache pdo_mysql
 COPY php.ini /usr/local/etc/php/conf.d/app.ini
-
-RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
-    echo "fr_FR.UTF-8 UTF-8" >> /etc/locale.gen && \
-    locale-gen
 
 COPY php.ini /usr/local/etc/php/conf.d/app.ini
 
