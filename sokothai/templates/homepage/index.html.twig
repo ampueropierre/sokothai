@@ -31,7 +31,7 @@
                             </li>
                         {% endif %}
                         <li class="nav-item">
-                            <a class="nav-link nav-link-custom" href="#">
+                            <a class="nav-link nav-link-custom" href="https://www.facebook.com/soko.thai/">
                                 <img src="{{ asset('build/images/facebook-app-symbol.svg') }}" alt="Logo facebook Sokothai" class="nav-facebook-logo">
                             </a>
                         </li>
@@ -91,7 +91,7 @@
     <section class="follow-facebook">
         <div class="container">
             <p>Suivez-nous sur facebook afin d'etre informer de nos actualités</p>
-            <a href="" class="btn-follow-facebook">
+            <a href="https://www.facebook.com/soko.thai/" class="btn-follow-facebook">
                 Facebook<span><i class="fa fa-chevron-right"></i></span>
             </a>
         </div>
@@ -103,52 +103,36 @@
                 <h3>Événements</h3>
                 <p>Retrouvez-nous dans nos différentes soirées à thème</p>
             </div>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <a href="#" class="block-event">
-                        <div class="block-event-information">
-                            <time>SAM. 31 OCT. 2020</time>
-                            <h4>HALLOWEN</h4>
-                            <span>18:00</span>
-                        </div>
-                        <div class="block-event-icon">
-                            <div class="circle">
-                                <svg width="3em" height="2em" viewBox="0 0 16 16" class="bi bi-chevron-compact-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
-                                </svg>
+            {% if events %}
+                {% for event in events %}
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <a href="{{ event.urlFacebook }}" class="block-event">
+                            <div class="block-event-information">
+                                <time>{{ event.createdAt|format_datetime(locale='fr',pattern="EEE dd LLL YYYY")|upper }}</time>
+                                <h4>{{ event.name }}</h4>
+                                <span>{{ event.createdAt|date('H:i') }}</span>
                             </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <a href="#" class="block-event">
-                        <div class="block-event-information">
-                            <time>SAM. 31 DEC. 2020</time>
-                            <h4>NOUVEL AN</h4>
-                            <span>18:00</span>
-                        </div>
-                        <div class="block-event-icon">
-                            <div class="circle">
-                                <svg width="3em" height="2em" viewBox="0 0 16 16" class="bi bi-chevron-compact-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
-                                </svg>
+                            <div class="block-event-icon">
+                                <div class="circle">
+                                    <svg width="3em" height="2em" viewBox="0 0 16 16" class="bi bi-chevron-compact-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="block-event">
-                        <p class="block-event-empty">Pas d'évènement pour le moment</p>
+                        </a>
                     </div>
                 </div>
-            </div>
-
+                {% endfor %}
+            {% else %}
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="block-event">
+                            <p class="block-event-empty">Pas d'évènement pour le moment</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
         </div>
     </section>
 
