@@ -13,8 +13,12 @@ services:
 
   maildev:
     image: djfarrelly/maildev
+    container_name: maildev
     ports:
+      - 25:25
       - "8002:80"
+    networks:
+      - symfony
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin

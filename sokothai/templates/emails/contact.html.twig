@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <img src="{{ absolute_url(asset('build/images/logo_black.png')) }}" alt="Logo Sokothai" style="margin-bottom: 15px">
+        <div>
+            <p>Vous avez récu un message de la part de <b>{{ name_contact }} ({{ mail_contact }})</b></p>
+            <p>Voici son message :</p>
+            <p>{{ message | nl2br }}</p>
+        </div>
+    </body>
+</html>

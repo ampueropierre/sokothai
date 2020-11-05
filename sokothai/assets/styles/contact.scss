@@ -1,7 +1,7 @@
 .contact {
-  text-align: center;
   padding: 100px 0;
   .header-contact {
+    text-align: center;
     h3 {
       font-family: gilroy-extrabold;
       font-size: 30px;
@@ -22,6 +22,8 @@
   }
 
   .btn-envoyer {
+    display: block;
+    margin: auto;
     font-size: 0.75rem;
     letter-spacing: 3px;
     font-weight: 700;
@@ -37,6 +39,7 @@
   }
 
   textarea {
+    height: 160px;
     resize: none;
   }
 }
