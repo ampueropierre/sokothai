@@ -1,5 +1,20 @@
 .contact {
   padding: 100px 0;
+  .message-success {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    span {
+      svg {
+        color: green;
+        margin-right: 15px;
+      }
+      background-color: #ABBF15;
+      font-size: 17px;
+      font-family: gilroy-extrabold;
+      padding: 27px;
+    }
+  }
   .header-contact {
     text-align: center;
     h3 {

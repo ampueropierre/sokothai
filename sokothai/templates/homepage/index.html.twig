@@ -166,21 +166,21 @@
 
             <div class="row">
                 <div class="col-lg-10 mx-auto">
-                    {{ form_start(form, {'attr': {'id': 'form-contact'}}) }}
+                    {{ form_start(form, {'attr': {'id': 'form-contact'}, 'action': path('ajax-mail')}) }}
                         <div class="form-group">
-                            {{ form_widget(form.name) }}
+                            {{ form_widget(form.name,{'attr': {'data-name': 'name'}}) }}
                             {{ form_errors(form.name) }}
                         </div>
                         <div class="form-group">
-                            {{ form_widget(form.mail) }}
+                            {{ form_widget(form.mail,{'attr': {'data-name': 'mail'}}) }}
                             {{ form_errors(form.mail) }}
                         </div>
                         <div class="form-group">
-                            {{ form_widget(form.subject) }}
+                            {{ form_widget(form.subject,{'attr': {'data-name': 'subject'}}) }}
                             {{ form_errors(form.subject) }}
                         </div>
                         <div class="form-group">
-                            {{ form_widget(form.text) }}
+                            {{ form_widget(form.text,{'attr': {'data-name': 'text'}}) }}
                             {{ form_errors(form.text) }}
                         </div>
                         <input type="submit" class="btn-envoyer mt-3" value="Envoyer">
