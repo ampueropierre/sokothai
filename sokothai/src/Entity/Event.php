@@ -38,6 +38,11 @@ class Event
      */
     private $user;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isActived = true;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -87,6 +92,18 @@ class Event
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getIsActived(): ?bool
+    {
+        return $this->isActived;
+    }
+
+    public function setIsActived(bool $isActived): self
+    {
+        $this->isActived = $isActived;
 
         return $this;
     }
