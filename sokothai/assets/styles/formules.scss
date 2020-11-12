@@ -45,7 +45,10 @@
     .row-price {
       display: flex;
       justify-content: center;
-      margin-bottom: 80px;
+      margin-bottom: 60px;
+      @media (min-width: 800px) {
+        margin-bottom: 70px;
+      }
       .block-price {
         display: flex;
         flex-direction: column;
