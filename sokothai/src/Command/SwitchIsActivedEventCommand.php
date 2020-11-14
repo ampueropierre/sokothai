@@ -28,7 +28,7 @@ class SwitchIsActivedEventCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $events = $this->entityManager->getRepository(Event::class)->findAllCreatedAtPassed(new \DateTime());
+        $events = $this->entityManager->getRepository(Event::class)->findAllCreatedAtBeforeOrAfter(new \DateTime());
 
         $i = 0;
         foreach($events as $event) {

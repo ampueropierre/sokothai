@@ -21,7 +21,7 @@ class HomeController extends AbstractController
      */
     public function index(Request $request, \Swift_Mailer $mailer)
     {
-        $events = $this->getDoctrine()->getRepository(Event::class)->findAll();
+        $events = $this->getDoctrine()->getRepository(Event::class)->findAllCreatedAtBeforeOrAfter(new \DateTime(), false);
 
         $form = $this->createForm(ContactType::class);
 
