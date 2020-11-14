@@ -17,3 +17,6 @@ import "@fortawesome/fontawesome-free/css/all.css";
 
 // Ajax Contact
 import './js/ajax/contact'
+
+// Flatpickr Date
+import './js/date/flatpickr'

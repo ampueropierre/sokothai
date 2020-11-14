@@ -1,0 +1,33 @@
+{% extends 'admin/base.html.twig' %}
+{% block body %}
+    <section class="py-4">
+        <div class="container">
+            <a href="{{ path('event_create') }}" class="btn btn-primary mb-3">Créer un évènement</a>
+            <h1>Liste des événements</h1>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr class="text-center">
+                        <th scope="col">Titre</th>
+                        <th scope="col">URL</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Statut</th>
+                        <th scope="col">En cours</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for event in events %}
+                        <tr class="text-center">
+                            <td>{{ event.name }}</td>
+                            <td>{{ event.urlFacebook }}</td>
+                            <td>{{ event.createdAt | date("m/d/Y h:i")  }}</td>
+                            <td>{{ event.isActived ? 'Active' : 'Pas active' }}</td>
+                            <td>{{ event.createdAt > date() ? 'À venir' : 'Passé' }}</td>
+                            <td><a href="{{ path('event_update', {id: event.id}) }}" class="btn btn-outline-primary">Modifier</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% endblock %}

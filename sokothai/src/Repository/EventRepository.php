@@ -21,16 +21,32 @@ class EventRepository extends ServiceEntityRepository
 
     /**
      * @param \DateTime $date
+     * @param bool $before
      * @return Event[] Returns an array of Event objects
      */
-    public function findAllCreatedAtPassed(\DateTime $date)
+    public function findAllCreatedAtBeforeOrAfter(\DateTime $date,bool $before = true)
     {
+        $moment = $before ? '<' : '>';
+
         return $this->createQueryBuilder('e')
-            ->andWhere('e.createdAt < :date AND e.isActived = :isActived')
+            ->andWhere('e.createdAt '.$moment.' :date AND e.isActived = :isActived')
             ->setParameter('date', $date)
             ->setParameter('isActived', true)
+            ->orderBy('e.createdAt','ASC')
             ->getQuery()
             ->getResult()
         ;
+    }
+
+    /**
+     * @return Event[] Returns an array of Event objects
+     */
+    public function findByOrderDate()
+    {
+        return $this->createQueryBuilder('e')
+            ->orderBy('e.createdAt','DESC')
+            ->getQuery()
+            ->getResult()
+            ;
     }
 }
