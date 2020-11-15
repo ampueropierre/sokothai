@@ -3,9 +3,10 @@
     <section class="py-4">
         <div class="container">
             <a href="{{ path('event_create') }}" class="btn btn-primary mb-3">Créer un évènement</a>
-            <h1>Liste des événements</h1>
-            <table class="table">
-                <thead class="thead-dark">
+            <h1 class="mb-4">Liste des événements</h1>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="thead-dark">
                     <tr class="text-center">
                         <th scope="col">Titre</th>
                         <th scope="col">URL</th>
@@ -14,8 +15,8 @@
                         <th scope="col">En cours</th>
                         <th scope="col">Action</th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     {% for event in events %}
                         <tr class="text-center">
                             <td>{{ event.name }}</td>
@@ -23,11 +24,12 @@
                             <td>{{ event.createdAt | date("m/d/Y h:i")  }}</td>
                             <td>{{ event.isActived ? 'Active' : 'Pas active' }}</td>
                             <td>{{ event.createdAt > date() ? 'À venir' : 'Passé' }}</td>
-                            <td><a href="{{ path('event_update', {id: event.id}) }}" class="btn btn-outline-primary">Modifier</a></td>
+                            <td><a href="{{ path('event_update', {id: event.id}) }}" class="btn btn-sm btn-outline-primary">Modifier</a></td>
                         </tr>
                     {% endfor %}
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 {% endblock %}
