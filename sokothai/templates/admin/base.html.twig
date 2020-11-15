@@ -16,6 +16,8 @@
                 <div class="d-flex justify-content-between">
                     <a href="{{ path('index_homepage') }}"><i class="fas fa-arrow-circle-left"></i> Retour au site</a>
                     <div>
+                        <a href="{{ path('event_list') }}" class="nav-link-custom text-dark mr-3">Évènements</a>
+                        <a href="{{ path('user_update', {id: app.user.id}) }}" class="nav-link-custom text-dark mr-3">Profil</a>
                         <a href="{{ path('app_logout') }}" class="nav-link-custom text-danger">Déconnexion</a>
                     </div>
                 </div>
