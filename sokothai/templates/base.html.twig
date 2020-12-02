@@ -12,10 +12,6 @@
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}
-            <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key={{ api_key_google }}&callback=initMap"
-                    type="text/javascript">
-            </script>
             <script>
                 let map;
 
@@ -48,6 +44,10 @@
                         title: 'Soko Thai'
                     });
                 }
+            </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key={{ api_key_google }}&callback=initMap"
+                    type="text/javascript">
             </script>
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
