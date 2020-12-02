@@ -1,13 +1,15 @@
 version: '3'
 services:
   db:
-    image: mysql:5
+    image: mariadb:latest
     restart: always
-    ports:
-    - "3307:3306"
     environment:
       MYSQL_DATABASE: sokothai_db
       MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "3307:3306"
+    volumes:
+      - mariadb-data:/var/lib/mysql
     networks:
       - symfony
 
@@ -27,6 +29,7 @@ services:
     depends_on:
       - db
     environment:
+      PMA_ARBRITARY: 1
       PMA_HOST: db
     networks:
       - symfony
@@ -35,10 +38,16 @@ services:
     build: php72
     ports:
     - "8072:80"
+    depends_on:
+      - db
     volumes:
       - .:/var/www
     networks:
       - symfony
+    working_dir: /var/www/sokothai
 
 networks:
   symfony:
+
+volumes:
+  mariadb-data:
