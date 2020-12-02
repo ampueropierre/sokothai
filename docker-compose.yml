@@ -9,7 +9,7 @@ services:
     ports:
       - "3307:3306"
     volumes:
-      - mariadb-data:/var/lib/mysql
+      - ./mariadb-data:/var/lib/mysql
     networks:
       - symfony
 
