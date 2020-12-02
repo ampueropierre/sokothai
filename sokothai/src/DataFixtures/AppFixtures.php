@@ -6,22 +6,40 @@ use App\Entity\Event;
 use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class AppFixtures extends Fixture
 {
+    /**
+     * @var UserPasswordEncoderInterface
+     */
     private $encoder;
 
-    public function __construct(UserPasswordEncoderInterface $encoder)
+    /**
+     * @var ParameterBagInterface
+     */
+    private $parameterBag;
+
+    /**
+     * AppFixtures constructor.
+     * @param UserPasswordEncoderInterface $encoder
+     * @param ParameterBagInterface $parameterBag
+     */
+    public function __construct(UserPasswordEncoderInterface $encoder, ParameterBagInterface $parameterBag)
     {
         $this->encoder = $encoder;
+        $this->parameterBag = $parameterBag;
     }
 
+    /**
+     * @param ObjectManager $manager
+     */
     public function load(ObjectManager $manager)
     {
         $user = new User();
         $user->setEmail('admin@sokothai.fr');
-        $user->setPassword($this->encoder->encodePassword($user,'sokothai_pass'));
+        $user->setPassword($this->encoder->encodePassword($user,$this->parameterBag->get('user_password')));
         $manager->persist($user);
 
         for ($i = 1; $i <= 3; $i++) {

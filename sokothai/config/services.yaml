@@ -6,6 +6,7 @@
 parameters:
     mail_contact: 'ampuero.pierre@gmail.com'
     api_key_google: '%env(API_KEY_GOOGLEMAP)%'
+    user_password: '%env(USER_PASSWORD)%'
 services:
     # default configuration for services in *this* file
     _defaults:
