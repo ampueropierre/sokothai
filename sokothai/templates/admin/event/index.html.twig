@@ -21,7 +21,7 @@
                         <tr class="text-center">
                             <td>{{ event.name }}</td>
                             <td>{{ event.urlFacebook }}</td>
-                            <td>{{ event.createdAt | date("m/d/Y h:i")  }}</td>
+                            <td>{{ event.createdAt | date("m/d/Y H:i")  }}</td>
                             <td>{{ event.isActived ? 'Active' : 'Pas active' }}</td>
                             <td>{{ event.createdAt > date() ? 'À venir' : 'Passé' }}</td>
                             <td><a href="{{ path('event_update', {id: event.id}) }}" class="btn btn-sm btn-outline-primary">Modifier</a></td>

@@ -1,10 +1,10 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <header xmlns="http://www.w3.org/1999/html">
+    <header xmlns="http://www.w3.org/1999/html" id="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand">
                     <img src="{{ asset('build/images/logo_white.svg') }}" alt="Logo Sokothai" class="logo-nav">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,16 +14,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link nav-link-custom" href="#">Nos formules</a>
+                            <a class="nav-link nav-link-custom" href="#formules">Nos formules</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-custom" href="#">Événements</a>
+                            <a class="nav-link nav-link-custom" href="#events">Événements</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-custom" href="#">Le lieux</a>
+                            <a class="nav-link nav-link-custom" href="#localisation">Le lieux</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-custom" href="#">Contact</a>
+                            <a class="nav-link nav-link-custom" href="#contact">Contact</a>
                         </li>
                         {% if is_granted('ROLE_USER') %}
                             <li class="nav-item">
@@ -44,12 +44,12 @@
             <div class="block-title">
                 <h1>Spécialité Asiatique</h1>
                 <p>Buffet à volonté</p>
-                <a href="" class="header-btn-cta">Notre carte</a>
+                <a href="{{ asset('build/images/menu.jpg') }}" class="header-btn-cta">Notre carte</a>
             </div>
         </div>
     </header>
 
-    <section class="formules">
+    <section class="formules" id="formules">
         <div class="container">
             <div class="header-formules">
                 <h3>Nos Formules</h3>
@@ -81,7 +81,7 @@
                             <div class="block-formules">
                                 <h4>À emporter</h4>
                                 <p>Tous les jours, en passant par le téléphone au <a class="number-telephone" href="tel:+330320558867">03 20 55 88 67</a> ou en envoyant un message via Messenger</p>
-                                <a href="" class="btn-formules-carte">Notre carte</a>
+                                <a href="{{ asset('build/images/menu.jpg') }}" class="btn-formules-carte">Notre carte</a>
                             </div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
         </div>
     </section>
 
-    <section class="events">
+    <section class="events" id="events">
         <div class="container">
             <div class="header-events">
                 <h3>Événements</h3>
@@ -246,4 +246,7 @@
                     href="{{ path('app_login') }}">Connexion</a>
         </p>
     </div>
+    <a class="scroll-top" href="#header" style="display: none">
+        <i class="fas fa-angle-up fa-2x"></i>
+    </a>
 {% endblock %}

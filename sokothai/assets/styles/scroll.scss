@@ -1,0 +1,18 @@
+.scroll-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background-color: #faf5e7;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: black;
+  display: flex;
+  box-shadow: 7px 5px 10px rgba(28, 28, 28, 0.3);
+  &:hover {
+    color: black;
+  }
+  svg {
+    margin: auto;
+  }
+}

@@ -20,3 +20,6 @@ import './js/ajax/contact'
 
 // Flatpickr Date
 import './js/date/flatpickr'
+
+// Scroll
+import './js/scroll/scroll'
